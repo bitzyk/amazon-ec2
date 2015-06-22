@@ -5,7 +5,6 @@
  * Date: 22/06/15
  * Time: 23:34
  */
-phpinfo(); exit;
 require_once __DIR__ . '/vendor/autoload.php';
 
 use PhpAmqpLib\Connection\AMQPConnection;
