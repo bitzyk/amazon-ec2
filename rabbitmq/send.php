@@ -18,4 +18,7 @@ $channel->queue_declare('bitzy first queue in rabbitmq', false, false, false, fa
 $msg = new AMQPMessage('Primul mesaj in queue!');
 $channel->basic_publish($msg, '', 'bitzy first queue in rabbitmq');
 
+$channel->close();
+$connection->close();
+
 echo 'Success!';
