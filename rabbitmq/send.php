@@ -14,3 +14,8 @@ $connection = new AMQPConnection('localhost', 5672, 'guest', 'guest');
 $channel = $connection->channel();
 
 $channel->queue_declare('bitzy first queue in rabbitmq', false, false, false, false);
+
+$msg = new AMQPMessage('Primul mesaj in queue!');
+$channel->basic_publish($msg, '', 'bitzy first queue in rabbitmq');
+
+echo 'Success!';
