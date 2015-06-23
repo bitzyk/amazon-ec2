@@ -11,7 +11,7 @@ use PhpAmqpLib\Connection\AMQPConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
 
-new AMQPConnection('localhost', 5672, 'guest', 'guest');
+$connection = new AMQPConnection('localhost', 5672, 'guest', 'guest');
 $channel = $connection->channel();
 
 $channel->queue_declare('bitzy first queue in rabbitmq', false, false, false, false);
