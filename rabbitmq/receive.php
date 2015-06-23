@@ -20,7 +20,7 @@ $callback = function($msg) {
     echo " [x] Received ", $msg->body, "\n";
 };
 
-$channel->basic_consume('hello', '', false, true, false, false, $callback);
+$channel->basic_consume('bitzy first queue in rabbitmq', '', false, true, false, false, $callback);
 
 while(count($channel->callbacks)) {
     $channel->wait();
