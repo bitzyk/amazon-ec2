@@ -21,3 +21,4 @@ $msg = new AMQPMessage('A simple message',
 );
 
 $channel->basic_publish($msg, '', 'queue2');
+//
