@@ -16,7 +16,7 @@ $channel = $connection->channel();
 
 $channel->queue_declare('queue2', false, false, false, false);
 
-$msg = new AMQPMessage($data,
+$msg = new AMQPMessage('A simple message',
     array('delivery_mode' => 2) # make message persistent
 );
 
